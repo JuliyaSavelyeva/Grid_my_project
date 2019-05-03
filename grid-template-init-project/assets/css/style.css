@@ -837,6 +837,71 @@ a{
     max-height: 488px;
 }
 
+.form{
+    background: #2D3651;
+}
+
+form input{
+    display: block;
+    height: 60px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 30px 0;
+    outline: none;
+    border: 2px solid #2D3651;
+    border-bottom: 2px solid #6A7084;
+    letter-spacing: 0.15em;
+    font-size: 1.125rem;
+    transition: 0.5s ease-in-out;
+}
+
+.form input:nth-of-type(1){
+    grid-area: f1;
+}
+
+.form input:nth-of-type(2){
+    grid-area: f2;
+}
+
+.form input:nth-of-type(3){
+    grid-area: f3;
+}
+
+.form-name,
+.form-email{
+    background-color: #38405A;
+    color: #637588;
+}
+
+.form-name:hover,
+.form-email:hover,
+.form-name:focus,
+.form-email:focus{
+    background-color: #4C546B;
+    color: #8492AB;
+    border: 2px solid #676E81;
+    border-bottom: 2px solid #ffffff;
+}
+
+.form-name:hover::placeholder,
+.form-email:hover::placeholder,
+.form-name:focus::placeholder,
+.form-email:focus::placeholder{
+    color: #8492AB;
+}
+
+.form-submit{
+    background-color: #424B63;
+    color: #ffffff;
+}
+
+.form-submit:hover,
+.form-submit:focus{
+    border: 2px solid #ffffff;
+    background-color: #d66926;
+}
+
 
 @media (min-width: 993px){
     .skills{
@@ -869,6 +934,13 @@ a{
     .about-img img{
         max-width: 100%;
         max-height: 488px;
+    }
+
+    .form .container{
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "f1 f2 f3";
     }
 }
   
@@ -919,6 +991,13 @@ a{
     .about-text::after{
         right: -30px;
         top: 145px;
+    }
+
+    .form .container{
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "f1 f2 f3";
     }
     
 }
@@ -992,6 +1071,23 @@ a{
     .about-img{
         min-width: 236px;
     }
+
+    .form .container{
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "f1 f1"
+            "f2 f3";
+    }
+
+    .form-email,
+    .form-submit{
+        margin-top: 0;
+    }
+
+    .form-name{
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 576px){
@@ -1052,5 +1148,27 @@ a{
 
     .about-img{
         margin-left: 24%;
+    }
+
+    .form .container{
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "f1"
+            "f2"
+            "f3";
+    }
+
+    .form-name{
+        margin-bottom: 0;
+    }
+
+    .form-email{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .form-submit{
+        margin-top: 0;
     }
 }
