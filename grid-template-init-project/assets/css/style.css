@@ -990,6 +990,60 @@ form input{
     transition: 0.5s;
 }
 
+.footer{
+    padding: 50px 20px 70px 20px;
+    background-color: #2d3651;
+    text-align: center;
+}
+
+.footer-icons{
+    margin-bottom: 40px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    justify-content: center;
+
+}
+
+.footer-icons::after {
+    position: absolute;
+    bottom: -20px;
+    left: calc(47.15%);
+    width: 75px;
+    height: 2px;
+    content: "";
+    background-color: #424B63;
+}
+
+.footer .fab{
+    font-size: 36px;
+}
+
+.footer-copy span:nth-of-type(1){
+    font-weight: 100;
+    margin-right: -0.86em;
+    letter-spacing: 0.33em;
+}
+
+.footer-copy span:nth-of-type(2){
+    font-weight: 700;
+    color: #e5e5e5;
+}
+
+.footer-icons a{
+    display: block;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.footer-icons a:hover,
+.footer-icons a:focus {
+    color: #d66926;
+}
+
+
+
+
 
 @media (min-width: 993px){
     .skills{
