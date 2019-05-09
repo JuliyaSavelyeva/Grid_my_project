@@ -549,6 +549,11 @@ a{
     position: relative;
 }
 
+.header-buttons{
+    display: flex;
+    justify-content: center;
+} 
+
 .header-overlay{
     position: absolute;
     top: 0;
@@ -561,7 +566,7 @@ a{
 
 .header-menu{
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -871,6 +876,10 @@ form input{
 .form-name,
 .form-email{
     background-color: #38405A;
+}
+
+.form-name::placeholder,
+.form-email::placeholder{
     color: #637588;
 }
 
@@ -1321,10 +1330,6 @@ form input{
           "bs";
     }
 
-    .header-buttons .btn:not(:last-of-type) {
-        margin-bottom: 20px;
-    }
-
     .skills .btn-set {
         padding: 0;
     }
@@ -1332,6 +1337,52 @@ form input{
     .btn-accent {
         width: 100%;
         margin: 0;
+    }
+
+    .header-menu{
+        background-color: rgba(68, 89, 110, 0.25);
+    }
+
+    .header-navbar__hamburger{
+        display: block;
+    }
+
+    .header-navbar__list{
+        position: absolute;
+        display: none;
+        top: 100%;
+        right: 20px;
+        text-align: right;
+        background-color: rgba(68, 89, 110, 0.9);
+        width: auto;
+    }
+
+    .header-title{
+        font-size: 1.875rem;
+    }
+
+    .header-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .header-buttons .btn:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+
+    .header-buttons .btn{
+        min-width: 170px;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 0.05em;
+        font-size: 1rem;
+    }
+
+    .header-title{
+        margin: 0 0 43px;
     }
 
     h2 {
