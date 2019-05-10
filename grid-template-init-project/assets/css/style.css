@@ -847,6 +847,7 @@ a{
 }
 
 form input{
+    color: #ffffff;
     display: block;
     height: 60px;
     width: 100%;
@@ -888,7 +889,7 @@ form input{
 .form-name:focus,
 .form-email:focus{
     background-color: #4C546B;
-    color: #8492AB;
+    color: #ffffff;
     border: 2px solid #676E81;
     border-bottom: 2px solid #ffffff;
 }
